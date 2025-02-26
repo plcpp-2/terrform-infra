@@ -1,0 +1,33 @@
+title: "Blockchain Infrastructure"
+description: "Infrastructure for blockchain node deployment"
+schemaVersion: 1.1.0
+version: "1.0.0"
+locale: "en"
+
+variableGroups:
+  - title: "General Configuration"
+    visible: true
+    variables:
+      - ${compartment_id}
+      - ${availability_domain}
+      - ${ssh_public_key}
+
+variables:
+  compartment_id:
+    type: oci:identity:compartment:id
+    required: true
+    title: "Compartment"
+    description: "The compartment where resources will be created"
+
+  availability_domain:
+    type: string
+    required: true
+    title: "Availability Domain"
+    description: "The availability domain where resources will be created"
+    default: "ODsK:US-CHICAGO-1-AD-1"
+    
+  ssh_public_key:
+    type: string
+    required: true
+    title: "SSH Public Key"
+    description: "The SSH public key that will be used to access the instance"

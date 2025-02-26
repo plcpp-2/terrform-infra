@@ -15,7 +15,7 @@ resource "oci_core_instance" "blockchain_node" {
 
   source_details {
     source_type = "image"
-    source_id   = var.instance_image_ocid[var.region]
+    source_id   = var.instance_image_ocid["us-chicago-1"]  # Hardcoded region
     # Maximum performance for free trial
     boot_volume_size_in_gbs = 200
   }
@@ -33,20 +33,13 @@ resource "oci_core_instance" "blockchain_node" {
 
   preserve_boot_volume = false
 
-  platform_config {
-    type = "AMD_VM"  # Using AMD_VM as it's compatible with A1.Flex
-    is_secure_boot_enabled = true
-    is_trusted_platform_module_enabled = true
-    is_measured_boot_enabled = false
-  }
-
   timeouts {
     create = "60m"  # Increased timeout for provisioning
   }
 
   # Tags for resource management
   defined_tags = {
-    "Environment" = "Development"
-    "Project"     = "Blockchain"
+    "Oracle-Tags.CreatedBy" = "Terraform"
+    "Oracle-Tags.CreatedOn" = timestamp()
   }
 }

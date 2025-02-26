@@ -1,0 +1,8 @@
+{
+    "compartment_ocid": "ocid1.tenancy.oc1..aaaaaaaach74femlcxgwuk74ljsafnqthrwa7shken5ku7gfp63z5gh4gvpa",
+    "region": "us-chicago-1",
+    "tenancy_ocid": "ocid1.tenancy.oc1..aaaaaaaach74femlcxgwuk74ljsafnqthrwa7shken5ku7gfp63z5gh4gvpa",
+    "user_ocid": "ocid1.user.oc1..aaaaaaaa5lm576ukymzvd3ihpnk2vhufvhmf6ook4txhsoqelxi7vlly2hjq",
+    "availability_domain": "ODsK:US-CHICAGO-1-AD-1",
+    "vcn_ocid": "ocid1.vcn.oc1.us-chicago-1.amaaaaaa3iapnsaahughdzctehemxpav6ew6dkgy7hbmgwqj7rluwvonxrra"
+}
